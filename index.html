@@ -6,7 +6,7 @@
   <title>vue.js</title>
 </head>
 <body>
-  <div id="app">
+  <!-- <div id="app">
     <input type="text" v-model="message">
     <input type="checkbox" v-model="isChecked">
     <p>{{ message }} {{ isChecked }}</p>
@@ -18,13 +18,21 @@
     </ul>
   </div>
 
-  <div id="ev">
+  <div id="click">
     <p>{{ counter }}</p>
     <button v-on:click="add">追加(関数)</button>
     <button v-on:click="counter++">追加(javascriptの文)</button>
+  </div> -->
+
+  <div id="app">
+    <ul>
+      <li v-for="item in items">
+        <label>
+          <input type="checkbox" v-model="item.isChecked"> {{ item.title }}
+        </label>
+      </li>
+    </ul>
   </div>
-
-
 
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="index.js"></script>
